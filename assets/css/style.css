@@ -1,42 +1,65 @@
-    
+
 body {
     background: url("../images/Vinyl\ records.jpg"); 
     background-size: 100%; 
-    text-align: center;   
+    text-align: center;  
 }
+
+.jumbotron {
+    font-weight: bold;
+	background-color: #343a40;
+    color: black;
+    margin-top: 10px;
+    max-width: 900px; 
+    border-radius: 30px;
+    margin: auto;
+    max-height: 50%;
+}
+
+.container {
+    padding: 10px;
+    text-align: auto;
+    margin-top: 20px;
+} 
 
 h1 {
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: cornflowerblue;
-    padding: 10px;
-    font-size: 25px;
-    color: white;
-    width: 350px;
-    margin: 10px;
-    border-radius: 5px;
+    background-color: #343a40;
+    letter-spacing: 5px;
+    font-size: 50px;
+    color: white;   
+    border-radius: 20px;
     text-align: center;
     margin: auto;
+    max-height: 20%;
 }
-
+ 
 #userInput {
-    font-size: 10px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 6px;
-    margin-top: 20px;
+    padding: 7px;
+    margin-top: 10px; 
     width: 200px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
+    margin: auto;
+ }
+
+#gifAddButton {
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 2px;
+    height: 35px; 
+    width: 75px; 
     border: none;
 }
 
-#submitButton {
-    margin-top: 20px;
-    border-radius: 5px;
-    border: none; 
-    padding: 3px;
-    background-color: cornflowerblue;
-    color: white;
-    
+#gifForm {
+    vertical-align: auto;
 }
+
+
 
