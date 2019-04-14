@@ -18,7 +18,7 @@
             // my bands in array; need to create buttons for each //  
     var topic =
         ["Rage Against the Machine", "Smashing Pumpkins", "Red Hot Chili Peppers", "Twenty One Pilots", "Imagine Dragons", "Post Malone", "Marshmello", "Travis Scott",
-        "Gary Clark Jr", "The Rolling Stones", "Foo Fighters", "Jack Johnson", "Kendrick Lamar", "Ghostland Observatory", "Outkast"];  
+        "Gary Clark Jr", "The Rolling Stones", "Foo Fighters", "Grouplove", "Kendrick Lamar", "Ghostland Observatory", "Outkast"];  
 
             // gifs displayed //
     function displayGifs() {
@@ -46,26 +46,26 @@
             imgElem.addClass("gif");
             divElem.append(imgElem);
 
-            var rating = $("<p>").text("Rating: " + response.data[i].rating);
+            var rating = $("<h5>").html("rating: " + response.data[i].rating);
             divElem.append(rating);
+
         }
     });
 }
-
+        // for loop to create the buttons for the topic. //
     function renderButtons() {
         $("#topicButtons").empty();
         for (var i=0; i<topic.length; i++) {
             var buttonElem = $("<button>");
             buttonElem.addClass("topic");
-            buttonElem.addClass("btn btn-light");
+            buttonElem.addClass("");
 
             buttonElem.attr("data-name", topic[i]);
             buttonElem.text(topic[i]);
-            $("#topicButtons").append(buttonElem);  
-        
+            $("#topicButtons").append(buttonElem);   
         }
     }
-    
+        // controls the pause/animate of the gif. //
     $(document).on("click", ".gif", function() {
         var state = $(this) .attr("data-state");
         if (state == "still") {
@@ -82,6 +82,7 @@
 
             var userSearch = $("#userInput").val().trim();
 
+        // adds the topic from the user and pushes to the array. //
             if (userSearch == "") {
                 return false;
             } else {
@@ -91,6 +92,7 @@
             renderButtons();
         });
 
+        // event listener that calls the gifs when clicked. //
         $(document).on("click", ".topic", displayGifs);
 
         renderButtons();
