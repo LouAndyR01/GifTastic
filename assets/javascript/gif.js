@@ -25,13 +25,14 @@
         $(".gif-info").empty();
        
     var userSearch= $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=MoNSkQro4W4eS3u98xWxH6M5hDSqyUNG&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=MoNSkQro4W4eS3u98xWxH6M5hDSqyUNG&limit=12";
 
+            // request to get get Gifs // 
         $.ajax({
             url: queryURL, method: "GET"})
             .then(function (response) {
             // console.log(response);
-        for (i=0; i < 10; i++) {
+        for (i=0; i < 12; i++) {
 
             var divElem = $("<div>");
             divElem.addClass("gif-info");
@@ -85,9 +86,9 @@
         // adds the topic from the user and pushes to the array. //
             if (userSearch == "") {
                 return false;
-            } else {
-                topic.push(userSearch);
-            }
+        } else {
+            topic.push(userSearch);
+        }
 
             renderButtons();
         });
@@ -95,7 +96,7 @@
         // event listener that calls the gifs when clicked. //
         $(document).on("click", ".topic", displayGifs);
 
-        renderButtons();
+            renderButtons();
         
             // ************************************ Practice **************************************//
 
