@@ -66,7 +66,7 @@
             $("#topicButtons").append(buttonElem);   
         }
     }
-        // controls the pause/animate of the gif. //
+        // controls the pause/animation of gif. //
     $(document).on("click", ".gif", function() {
         var state = $(this) .attr("data-state");
         if (state == "still") {
